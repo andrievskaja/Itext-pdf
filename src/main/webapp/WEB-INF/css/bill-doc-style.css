@@ -1,0 +1,255 @@
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Semibold.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Bold.otf);
+  font-weight: bold;
+}
+#container-paper{
+    font-family: MyriadPro;
+}
+.left { float: left; } 
+.right { float: right; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; } 
+.clearfix:after { clear: both; } 
+/* IE6/7 support */
+.clearfix { zoom: 1; }
+
+#container-paper {
+    padding: 20px;
+    position: relative;
+    margin: 0 auto;
+}
+#header-paper {
+    height: 70.8661417pt;
+    border-bottom: 1pt solid #4D6DA7;
+}
+
+.logo {
+    width: 100pt;
+    height: auto;
+}
+
+.qrcode {
+    width: 35pt;
+    height: 35pt;
+}
+
+
+#content-paper {
+    padding-top:30pt;
+}
+
+.doc-name {
+    font-size: 14pt;
+    color: #4C6FAF;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+#client-info{
+    width: 55%;
+}
+#company-info {
+    width: 25%;
+    min-width: 156px;
+}
+
+.info-text {
+    font-weight: 400;
+    font-size: 8pt;
+    line-height: 9pt;
+    color: #201600;
+}
+.info-text span{
+    color: #201600;
+}
+#container-paper table, #container-paper td{
+    border:none;
+}
+#container-paper td{
+    word-wrap: break-word;
+    line-height: 1.1;
+}
+#main-table {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 40pt;
+}
+
+.main-th {
+    font-size: 8pt;
+    font-weight: 400;
+    color: #2A2A2A;
+    background: #DFE0E0;
+    line-height: 1.1;
+    height: 33.278pt;
+    vertical-align: middle;
+}
+.main-th:first-child{
+    width: 50px;
+}
+.main-th:nth-child(2){
+    width: 40%;
+}
+.main-th:nth-child(3){
+    width: 50px;
+}
+
+#container-paper .main-td {
+    padding: 0 10px;
+    border-top: 1pt solid #fff;
+    border-right: 1pt solid #fff;
+    height: 33.278pt;
+    font-weight: 400;
+    font-size: 9pt;
+    text-align: center;
+    background: #F4F4F4 !important;
+}
+#main-table .first-td,
+#main-table .second-td {
+    font-weight: 700;
+}
+
+.last-td {
+    border-right: 0;
+    background: #DFE0E0;
+}
+
+
+.dop-table {
+    margin-top: 40pt;
+    width: 100%;
+}
+
+
+#dop-table-two {
+    margin-top: 40pt;
+}
+
+.dop-table-one-th {
+    font-size: 8pt;
+    font-weight: 400;
+    border-bottom: 1pt solid #4D6DA7;
+    color: #4D6DA7;
+    line-height: 33.278pt;
+    height: 33.278pt;
+    text-align: center;
+}
+
+.dop-one-tr .dop-table-one-th:first-child {
+    width: 308.062pt;
+    font-size: 9pt;
+    font-weight: 700;
+    text-align: left;
+}
+.dop-one-tr .dop-table-one-th:nth-child(2) {
+    width: 73.071pt;
+}
+.dop-one-tr .dop-table-one-th:nth-child(3) {
+    width: 61.861pt;
+}
+.dop-one-tr .dop-table-one-th:last-child {
+    width: 66.765pt;
+}
+
+.dop-table-one-td {
+    font-size: 9pt;
+    font-weight: 400;
+    text-align: center;
+    line-height: 33.278pt;
+    height: 33.278pt;
+}
+
+.dop-two-tr th{
+    width: 20%;
+    font-size: 9pt;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+#footer-paper {
+    margin-top: 50px;
+    height: 70.8661417pt;
+    padding-top: 25pt;
+}
+.footer-caption{
+    border-bottom: 1pt solid #4D6DA7;
+    font-size: 9pt;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1;
+}
+#footer-left .info-text {
+    color: #201600;
+    font-size: 8pt;
+    font-weight: 400;
+}
+
+#footer-left .info-text:first-child {
+    color: #4D6DA7;
+    font-weight: 700;
+}
+
+#footer-info {
+    position: relative;
+}
+
+#footer-mdl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#footer-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1413px) {
+    #content-paper-wrapper{
+        margin-left: 0;
+    }
+    #container-paper .main-td{
+        padding: 0 5px;
+        line-height: 1;
+    }
+    .main-th{
+        line-height: 1.1;
+        vertical-align: middle;
+    }
+    .dop-one-tr th{
+        width: auto !important;
+    }
+    #footer-paper{
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    #footer-mdl{
+        left: 68px;
+    }
+}
+
+
+
+
+
+
+
+
+

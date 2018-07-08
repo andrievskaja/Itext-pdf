@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-boot-itext-pdf:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring-boot-itext-pdf-1.0.war">
+      <element id="artifact" artifact-name="spring-boot-itext-pdf:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,306 @@
+*::-webkit-scrollbar {
+  width: 4px;
+}
+*::-webkit-scrollbar:horizontal{
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c0c0c8;
+  border-radius: 10px;
+}
+*::-webkit-contacts-auto-fill-button {
+    opacity: 0;
+}
+
+body{
+  background-color: #fbfbfd
+}
+button{
+  cursor: pointer;
+}
+.container {
+  width: 1230px;
+  margin: auto;
+}
+
+.pull-l {
+  float: left;
+}
+
+.pull-r {
+  float: right;
+}
+
+.flex {
+  display: flex;
+}
+.inline-flex{
+  display: inline-flex;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn {
+  border-radius: 7px;
+  height: 40px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.angle-right {
+  transition: .5s;
+}
+.active-dropdown .angle-right{
+  transform: rotate(90deg);
+}
+.angle{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 25px;
+  color: #8a8b98;
+}
+form {
+  width: 350px;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form select, form option, form textarea{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  height: 40px;
+  background-color: #f3f4fa;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#9494a0;font-size: 14px;letter-spacing: 0.5px;word-spacing: 1.2px;font-weight: normal;}
+input::-moz-placeholder, textarea::-moz-placeholder {color:#9494a0;font-size: 14px;letter-spacing: 0.5px;word-spacing: 1.2px;font-weight: normal;}/* Firefox 19+ */
+input:-moz-placeholder, textarea:-moz-placeholder {color:#9494a0;font-size: 14px;letter-spacing: 0.5px;word-spacing: 1.2px;font-weight: normal;}/* Firefox 18- */
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#9494a0;font-size: 14px;letter-spacing: 0.5px;word-spacing: 1.2px;font-weight: normal;}
+
+.content .tarif-btn, .content .theme-settings{
+  color: #9494a0;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+}
+form input:focus, form select:focus, form option:focus {
+  background-color: #fff;
+}
+
+.action-btn {
+  width: 150px;
+  background-color: #66b4f2;
+  box-shadow: 0px 2px 0px 0px rgba(191, 199, 212, 0.2);
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.add-btn{
+  color: #fff;
+  cursor: pointer;
+  line-height: 30px;
+  vertical-align: middle;
+  font-size: 20px;
+  background-color: #ffce59;
+  border-radius: 5px;
+}
+
+.delete-btn{
+  background-color: #ff565e;
+}
+
+.tooltip{
+  position: absolute;
+  background-color: #fff;
+  color: #5e5e6f;
+  -webkit-box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.17);
+  box-shadow: 5px 5px 21px 1px rgba(0,0,0,0.17);
+}
+.tooltip-container{
+  position: relative;
+  cursor: pointer;
+}
+.tooltip:after{
+  content: "";
+  border: 7px solid transparent; 
+  border-bottom: 7px solid #fff;
+  position: absolute;
+  z-index: 10000;
+  top: -12px;
+  right: 5px;
+}
+table{
+  width: 100%;
+  border: 1px solid #e8e9f0;
+  border-radius: 10px;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+td{
+vertical-align: middle;
+text-align: center;
+height: 50px;
+background-color: #fff;
+}
+thead td{
+  font-weight: bold;
+  line-height: 1.2;
+}
+tbody tr:nth-child(even) td{
+  background-color: #fcfcfe;
+}
+tbody td {
+  border: 1px solid #e8e9f0;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.page-header{
+  position: absolute;
+  width: calc(100% - 320px);
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3f4fa;
+}
+.modal-window{
+  border-radius: 5px;
+  background-color: #fbfbfd !important;
+  overflow: visible !important;
+}
+.modal-window .fancybox-close-small{
+  top: -20px;
+  right: -32px;
+  width: 40px;
+  height: 40px;
+
+}
+.modal-window .fancybox-close-small:after{
+  background-color: transparent;
+  font-size: 35px;
+  color: #ff565e;
+}
+.modal-window .fancybox-close-small:hover:after{
+    background-color: inherit;
+    color: #ff565e;
+}
+.modal-window h3{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.modal-window .action-btn{
+  width: 170px;
+}
+
+/***User search***/
+.SumoSelect{
+  width: 100%;
+}
+.SumoSelect>.CaptionCont{
+  border: 0;
+  background-color: #f3f4fa;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.SumoSelect>.CaptionCont>span.placeholder{
+  font-style: inherit;
+  font-size: 14px;
+  color: #9494a0;
+}
+.SumoSelect>.CaptionCont>label>i{
+  background-image: none;
+}
+.SumoSelect>.CaptionCont>label>i:before{
+  content: '\f105';
+  position: absolute;
+  color: #9494a0;
+  top: -11px;
+  right: 3px;
+  font-size: 25px;
+  font-family: FontAwesome;
+}
+.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont{
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.SumoSelect.open>.optWrapper{
+  top: 40px;
+  border:none;
+    box-shadow: 0px 5px 13px 0px rgba(99, 98, 108, 0.07);
+    margin-bottom: 20px;
+}
+.SumoSelect .select-all{
+  border-top:1px solid #f3f4fa;
+  border-bottom:1px solid #f3f4fa;
+  padding: 8px 0 8px 35px;
+}
+.SumoSelect>.optWrapper>.options li.opt{
+  border-bottom:1px solid #f3f4fa;
+}
+.SumoSelect>.CaptionCont>span{
+  font-size: 15px;
+  color: #9494a0;
+  line-height: 1;
+}
+.SumoSelect>.optWrapper>.options{
+  max-height: 190px;
+}
+
+.SumoSelect>.optWrapper.multiple>.options li.opt span, .SumoSelect .select-all>span{
+  left: 43px;
+}
+.SumoSelect .select-all>span i, .SumoSelect>.optWrapper.multiple>.options li.opt span i{
+  right: 20px;
+  border: 2px solid #66b4f2;
+  border-radius: 5px;
+  box-shadow: none;
+  width: 15px;
+  height: 15px;
+}
+
+.SumoSelect .select-all.partial>span i, .SumoSelect .select-all.selected>span i, .SumoSelect>.optWrapper.multiple>.options li.opt.selected span i{
+  background-image: none;
+  background-color: #fff;
+  border-color: #66b4f2;
+}
+.SumoSelect .select-all.selected>span i:before, .SumoSelect>.optWrapper.multiple>.options li.opt.selected span i:before{
+  content: "\2713";
+    font-size: 22px;
+    color: #66b4f2;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+/*User search*/

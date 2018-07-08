@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700" rel="stylesheet"/>
+    </head>
+    <body>
+        <table WIDTH="100%" style="text-align: left;border-collapse: collapse; 
+               font-family: 'Istok Web', sans-serif;">
+            <thead>
+                <tr>
+                    <td valign="top" height="40.48pt"></td>
+                    <td valign="top" align="right"></td>
+                </tr>
+                <tr><td  colspan="2"><p style=";width: 100%;color:#4D6DA7;">____________________________________________________________________________</p></td></tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td colspan="2" style="height:12pt;"></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center" colspan="2"><h1 style="font-size: 14pt;text-align: center; color:#4C6FAF;padding:10pt 0">Счет</h1></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 8pt;line-height: 3px;" valign="top">
+
+                        <p>Дата: $list.data$</p>
+                        <p>Счет: $list.billNumber$</p>
+                        <p>Договор: $list.contractNumber$</p>
+                        <p>Адрес $list.address$</p>
+
+
+                        $if(list.userCompany)$  
+                        <p>Без НДС.: $list.tax$</p>
+                        $endif$
+
+                        <p>Телефон $list.phone$</p>
+                        <p>E-mail: $list.email$</p>
+                    </td>
+                    <td valign="top" style="padding-left: 320px;font-size: 8pt;line-height: 3px;">
+                        <!--<ul style="list-style: none;font-size: 8pt;line-height: 1.2;text-align: left;">-->
+                        <p>Иванов Иван</p>
+                        <p>Набережная победы 28</p>
+                        <p>49000 Днепр</p>
+                        <p>П/р: 260015022332б</p>
+                        <p>Tel. 3700</p>
+                        <p>E-mail: info@privat.com</p>
+                        <p>Украина Днепр,</p>
+                        <p>МФО 23224</p>
+                        <p>Получатель Иванова Иванна</p>
+                        <!--</ul>-->
+                    </td>
+                </tr>
+                <!-- table -->
+                <tr>
+                    <td colspan="2">
+                        $if(list.countLine)$
+                        <div style="height:410pt;">
+                            $else$
+                            <div>
+                                $endif$
+                                <!--                                <div style="height:280px;">-->
+                                <table  style="border-collapse: collapse; width: 100%; text-align: center;margin-top: 35pt; ">
+                                    <thead style="background-color: #DFE0E0; font-size: 8pt;">
+                                        <tr>
+                                            <td style="width: 50px; height: 33.278pt;">№</td>
+                                            <td style="width: 470px;">Описание</td>
+                                            <td style="width: 50px;">Количество</td>
+                                            <td style="width: 110px;">Цена без НДС, гр.</td>
+                                            <td style="width: 110px;">НДС, гр.</td>
+                                            <td style="width: 110px;">Сумма, гр.;</td>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        $list.billsServicesForm:{form |
+                                        <tr style="font-size: 8pt; background-color: #F4F4F4;height:33.278pt;">
+                                            <td style="border: 1px solid #fff;border-collapse: collapse;" > $i$</td>
+                                            <td style="border: 1px solid #fff;border-collapse: collapse;" >$form.serviceName$ </td>
+                                            <td style="border: 1px solid #fff;border-collapse: collapse;">$form.serviceCount$ </td>
+                                            <td style="border: 1px solid #fff;border-collapse: collapse;">$form.servicePriceByCount$ </td>
+                                            <td style="border: 1px solid #fff;border-collapse: collapse;">$form.serviceNds$ </td>
+                                            <td style="border: 1px solid #DFE0E0;border-top-color: #fff;border-collapse: collapse;background-color:#DFE0E0;">$form.servicePriceByCountAndNds$ </td>
+                                        </tr>   
+                                        }$
+                                    </tbody>
+                                </table>
+
+                                <table style="border-collapse: collapse; width: 100%; text-align: center;margin-top: 20pt">
+                                    <tr><td colspan="6" style="height: 15pt;"></td></tr>
+                                    <tr style="font-size: 8pt;height:10pt;">
+                                        <td colspan="3" style="color: #4D6DA7;text-align: left;font-weight: bold;padding-left: 10pt;">Счет</td>
+                                        <td style="color: #4D6DA7;">Цена без НДС</td>
+                                        <td style="color: #4D6DA7;">НДС</td>
+                                        <td style="color: #4D6DA7;">Сумма</td>
+                                    </tr>
+                                    <tr><td  colspan="6" style="width:100%;"><p style="width: 100%;color:#4D6DA7;">___________________________________________________________________________</p>
+                                        </td>
+                                    </tr>
+
+                                    <tr style="font-size: 8pt;height:20pt;padding-top:10pt;">
+                                        <td colspan="3"></td>
+                                        <td>$list.allSumWithoutNds$ &#8364;</td>
+                                        <td>$list.allNds$ &#8364;</td>
+                                        <td>$list.sumWithNds$ &#8364;</td>
+                                    </tr>
+                                </table>
+
+                                <table style="font-size: 8pt; width:70%;  text-align: center; border-collapse: collapse; margin-top:20pt;">
+                                    <thead style="color:#4D6DA7;">
+                                        <tr style="height:10pt;">
+                                            <td style=" text-align: left;padding-left: 10pt; font-weight: bold;">НДС</td>
+                                            <td>Ставка НДС</td>
+                                            <td>Сумма без НДС</td>
+                                            <td>Сумма НДС</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" style="text-align: left;"><p style="width: 100%;color:#4D6DA7;text-align: left;padding-left:10pt; ">_________________________________________________________________________</p></td>
+                                        </tr>
+                                    </thead>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>$list.nds$ %</td>
+                                        <td>$list.allSumWithoutNds$ гр.</td>
+                                        <td>$list.allNds$ гр.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <table width="100%">
+                            <tr><td colspan="3" style="height: 30pt;"></td></tr>
+                            <tr>
+                                <td colspan="3" style="text-align: left;"><p style="width: 100%;color:#4D6DA7;text-align: left;padding-left:10pt; ">__________________________________________________________________________</p></td>
+                            </tr>
+                            <tr><td colspan="3" style="height: 20pt;"></td></tr>
+                            <tr style="font-size: 8pt;line-height: 3px;" valign="bottom">
+                                <td style="padding-left:10px;">
+                                    <p style="font-weight: bold; color:#4D6DA7; ">Банк</p>
+                                    <p>ПриватБанк, Днепр</p>
+                                    <p>Индекс: 49000</p>
+                                    <p>Номер счета: 133588400</p>
+                                </td>
+                                <td style="text-align: center;">
+                                    <p>support@privat.com </p>
+                                    <p>$list.data$ </p>
+                                </td>
+                                <td style="text-align: right;">
+                                    privat.com
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </body>
+</html>

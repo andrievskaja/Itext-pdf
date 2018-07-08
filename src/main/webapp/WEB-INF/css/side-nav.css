@@ -1,0 +1,132 @@
+.side-navigation {
+  width: 300px;
+  height: 100vh;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 10px 0 10px;
+  background-color: #4e4e56;
+  box-sizing: border-box;
+  overflow-x: visible;
+  transition: .3s;
+  z-index: 9999999999999;
+}
+
+.burger{
+  position: absolute;
+  width: 28px;
+  height: 45px;
+  box-sizing: border-box;
+  background-color: #4e4e56;
+  z-index: 99999999999999999999;
+  top: 0;
+  right: -28px;
+  padding: 7px 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  display: none;
+}
+.burger span {
+    writing-mode: vertical-rl;
+    color: #fff;
+    line-height: 1;
+}
+.side-navigation .admin-name{
+  margin-bottom: 20px;
+  padding:10px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.side-navigation .admin-name .tooltip-container{
+  width: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.exit{
+  right: -7px;
+  bottom: -20px;
+  padding: 5px 20px;
+  font-size: 15px;
+}
+.side-navigation .admin-name:hover, .side-navigation .side-btn:hover{
+  background-color: #63626c;
+}
+.side-navigation .admin-name .avatar-wrap{
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.side-navigation .admin-name .avatar-wrap img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.side-navigation .admin-name p {
+  color: #f2f2f7;
+  width: 100%;
+}
+
+.side-navigation .admin-name p span {
+  color: #7fe0e2;
+}
+.side-navigation .admin-name .angle-right i{
+  font-size: 23px;
+  color:#c0c0c8;
+}
+.admin-name a:first-child{
+  width: 100%;
+}
+.admin-name a:nth-child(2){
+  width: 20px;
+  justify-content: flex-end;
+}
+.admin-name a:last-child{
+  align-items: center;
+}
+
+.side-navigation .side-btn {
+  align-items: center;
+  color: #c0c0c8;
+  height: 34px;
+  cursor: pointer;
+  padding: 5px 5px 5px 30px;
+}
+
+.side-navigation .side-btn span {
+  padding: 0 5px 0 5px;
+  color: #c0c0c8;
+}
+
+.side-navigation .side-btn span .fa-angle-right {
+  font-size: 23px;
+  color: #c0c0c8;
+}
+.side-navigation .active{
+  background-color: #63626c;
+}
+@media screen and (max-width: 1200px) {
+  .side-navigation {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger{
+    display: block;
+  }
+  .side-navigation{
+    margin-left: -220px;
+  }
+  .is-open{
+    margin-left: 0;
+    transition: .3s;
+  }
+}

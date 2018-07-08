@@ -1,0 +1,82 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeueCyr-Light.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeueCyr-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Semibold.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url(../fonts/MyriadPro-Bold.otf);
+  font-weight: bold;
+}
+
+.blue-txt {
+  color: #66b4f2;
+}
+
+.purple-txt {
+  color: #9d9cef;
+}
+
+.pink-txt {
+  color: #ffb8e5;
+}
+
+.green-txt {
+  color: #7fe0e2;
+}
+
+.orange-txt {
+  color: #ffce59;
+}
+
+*,body {
+  font-family: MyriadPro;
+  font-size: 16px;
+  color: #5e5e6f;
+  letter-spacing: 0.5px;
+  word-spacing: 1.2px;
+  font-weight: normal;
+}
+body{
+  line-height: 1.6;
+}
+h1,h2,h3{
+  color: #5e5e6f
+}
+h1 {
+  font-family: HelveticaNeue;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+b {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}

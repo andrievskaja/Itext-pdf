@@ -1,0 +1,74 @@
+.select2-selection__arrow{
+	display: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	color: #5e5e6f;
+}
+.select2-container--default .select2-selection--single{
+	border: 0;
+	outline: none;
+}
+.select2-container--open .select2-dropdown--below, .select2-results__options li:first-child{
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+.select2-results__options li:last-child{
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.select2-dropdown{
+	border: none;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-container--default .select2-results__option[aria-selected=true]{
+	background-color: #c0c0c8;
+	color: #fff;
+}
+
+form .select2-container--default .select2-selection--single {
+	align-items: center;
+	display: flex;
+	height: 40px;
+	background-color: #f3f4fa;
+	border-radius: 5px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{ 
+	color: #9494a0;
+	font-size: 14px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+	padding-right: 0;
+}
+.select2-container--default .select2-selection--multiple{
+	box-sizing: border-box;
+	border: 0;
+	background-color: #f3f4fa;
+	margin-bottom: 12px;
+	min-height: 40px;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+	background-color: #f3f4fa;
+	border:none;
+	color: #8a8b98;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+	display: flex;
+	min-height: 40px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-right: 30px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li{
+	margin-top: 0;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	background-color: #fff;
+}
+.select2-selection--multiple input{
+	height: auto;
+	margin: 0;
+}
+.select2-container{
+	z-index: 99999;
+}

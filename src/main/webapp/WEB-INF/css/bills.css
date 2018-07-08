@@ -1,0 +1,164 @@
+.content{
+	justify-content: flex-start;
+	padding-left: 0;
+	padding-right: 0;
+	height: 100%;
+}
+.content .page-header{
+	border-bottom: 1px solid #f3f4fa;
+	padding-bottom: 10px;
+}
+.content form{
+	width:30%;
+	min-width: 300px;
+}
+.content .content-innerwrap{
+	justify-content: space-around;
+	padding-top: 55px;
+}
+.content .button-wrap button{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  height: 40px;
+  background-color: #f3f4fa;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: #9494a0;
+}
+.content form .angle-right i{
+	font-size: 25px;
+	color: #9494a0;
+}
+.content form .client-change{
+	background-color: #f3f4fa;
+	margin-bottom: 12px;
+	border-radius: 5px;
+	align-items: center;
+	padding: 0 10px;
+	box-sizing: border-box;
+	height: 40px;
+}
+.content form .client-dropdown{
+	background-color: #f3f4fa;
+	margin-bottom: 12px;
+	margin-top: -15px;
+	border-bottom-left: 5px;
+	border-bottom-right: 5px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	height: 300px;
+	overflow-y: scroll;
+}
+.content form .client-change .letter-template, .content form .client-change .angle-right{
+	color: #9494a0;
+	font-size: 14px;
+}
+.content form .client-dropdown table tr td:first-child{
+	border-right: 1px solid #fff;
+}
+.content form .client-dropdown table td{
+	background-color: #f3f4fa;
+	border: 0;
+	max-width: 50%;
+	text-align: left;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.content form .client-dropdown table thead td{
+	text-align: center;
+}
+.content form .client-dropdown input{
+	display: none;
+}
+.content form .client-dropdown label{
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+	width: 100%;
+}
+.content form .client-dropdown label span{
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	width: 95px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content form .client-dropdown label:before{
+	border:2px solid #66b4f2;
+	top: -4px;
+	left: 0;
+	right: -10px;
+	left: auto;
+	bottom: 0;
+	margin-right: 10px;
+}
+.content form .client-dropdown table{
+	border: 0;
+}
+.content form .services .service{
+	margin:30px 0;
+}
+.remove-field{
+	background-color: #ff565e;
+}
+.content form textarea{
+	height: 70px;
+}
+.content form .amount{
+	justify-content: space-between;
+}
+.content form .amount .input-wrap{
+	width: 40%;
+}
+.content form .amount .add-btn{
+	height: 40px;
+	width: 40px;
+}
+.content form .nds{
+	width: 40%;
+}
+.content form .btn-wrap{
+	justify-content: space-between;
+}
+.content form .action-btn{
+	width: 47%;
+	font-size: 12px;
+	padding: 5px;
+}
+.content form .delete-field{
+	background-color: red;
+}
+.content .bill-wrap{
+	height: calc(100vh - 100px);
+    min-height: 720px;
+    overflow-y: scroll;
+	width: 50%;
+	max-width: 720px;
+	min-width: 340px;
+	box-shadow: 0px 5px 13px 0px rgba(99, 98, 108, 0.07);
+}
+
+@media screen and (max-width: 1100px) {
+	.content form{
+    width: 300px;
+  	}
+	.content-innerwrap{
+		flex-direction: column;
+		align-items: center;
+	}
+	.content .bill-wrap{
+		margin-top: 70px;
+		width: 80%;
+		overflow-x: scroll;
+	}
+	.content #container-paper{
+		height: 920px;
+		min-width: 530px;
+	}
+}

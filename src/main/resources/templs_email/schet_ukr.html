@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700" rel="stylesheet"/>
+    </head>
+    <body>
+        <table WIDTH="100%" style="text-align: left;border-collapse: collapse; 
+               font-family: 'Istok Web', sans-serif;">
+            <thead>
+                <tr>
+                    <td valign="top" height="40.48pt"></td>
+                    <td valign="top" align="right"></td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td colspan="2" style="height:14px;"></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 14pt;text-align: center; color:#4C6FAF" colspan="2">Рахунок на оплату №  $list.billNumber$ від $list.data$.</td>
+                </tr>
+                <tr><td  colspan="2"><p style=";width: 100%;color:#4D6DA7;margin:0;height: 35pt;">____________________________________________________________________________</p></td></tr>
+                <tr>
+                    <td colspan="2" valign="top">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="vertical-align: top;padding:0 20pt 30pt 0;font-size: 8pt;width:80pt;">Постачальник</td>
+                                <td style="vertical-align: top;padding-bottom: 30pt;font-size: 8pt;">Фiзична особа-підприємець Иванова Ольга <br/>
+                                    П/р 260015022332б Банк Пат КБ 'ПриватБанк', МФО 23224 <br/>
+                                    Україна 4900б м. Дніпро, вул Героев, дом 26
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 10pt;" valign="top">
+                                    <div>Покупець: Тест </div>
+                                    <div>Дата: $list.data$</div>
+                                    <div>Счет: $list.billNumber$</div>
+                                    <div>Договор: $list.contractNumber$</div>
+                                    <div>Адрес: $list.address$</div>
+                                    </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table  style="border-collapse: collapse; width: 100%; text-align: center;margin-top: 35pt; ">
+                            <thead style="background-color: #DFE0E0; font-size: 8pt;">
+                                <tr>
+                                    <td style="width: 50px; height: 33.278pt;">№</td>
+                                    <td style="width: 470px;">Товари (роботи, послуги)</td>
+                                    <td style="width: 50px;">Кількість</td>
+                                    <td style="width: 110px;">Од.</td>
+                                    <td style="width: 110px;">Ціна</td>
+                                    <td style="width: 110px;">Сума</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                $list.billsServicesForm:{form |
+                                <tr style="font-size: 8pt; background-color: #F4F4F4;height:33.278pt;">
+                                    <td style="border: 1px solid #fff;border-collapse: collapse;" > $i$</td>
+                                    <td style="border: 1px solid #fff;border-collapse: collapse;" >$form.serviceName$ </td>
+                                    <td style="border: 1px solid #fff;border-collapse: collapse;">$form.serviceCount$ </td>
+                                    <td style="border: 1px solid #fff;border-collapse: collapse;">$form.servicePriceByCount$ </td>
+                                    <td style="border: 1px solid #fff;border-collapse: collapse;">$form.serviceNds$ </td>
+                                    <td style="border: 1px solid #DFE0E0;border-top-color: #fff;border-collapse: collapse;background-color:#DFE0E0;">$form.servicePriceByCountAndNds$ </td>
+                                </tr>   
+                                }$
+                            </tbody>
+                        </table>
+
+                        <table style="border-collapse: collapse; width: 100%; text-align: center;margin-top: 20pt">
+                            <tr><td colspan="6" style="height: 15pt;"></td></tr>
+                            <tr style="font-size: 8pt;height:10pt;">
+                                <td colspan="3" style="color: #4D6DA7;text-align: left;font-weight: bold;padding-left: 10pt;">Счет</td>
+                                <td style="color: #4D6DA7;">Ціна без ПДВ</td>
+                                <td style="color: #4D6DA7;">ПДВ</td>
+                                <td style="color: #4D6DA7;">Сума</td>
+                            </tr>
+                            <tr><td  colspan="6" style="width:100%;"><p style="width: 100%;color:#4D6DA7;">___________________________________________________________________________</p>
+                                </td>
+                            </tr>
+
+                            <tr style="font-size: 8pt;height:20pt;padding-top:10pt;">
+                                <td colspan="3"></td>
+                                <td>$list.allSumWithoutNds$ &#8364;</td>
+                                <td>$list.allNds$ &#8364;</td>
+                                <td>$list.sumWithNds$ &#8364;</td>
+                            </tr>
+                        </table>
+
+                        <table style="font-size: 8pt; width:70%;  text-align: center; border-collapse: collapse; margin-top:20pt;">
+                            <thead style="color:#4D6DA7;">
+                                <tr style="height:10pt;">
+                                    <td style=" text-align: left;padding-left: 10pt; font-weight: bold;">Розрахункова строка</td>
+                                    <td>Процент ПДВ</td>
+                                    <td>Ціна без ПДВ</td>
+                                    <td>ПДВ</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align: left;"><p style="width: 100%;color:#4D6DA7;text-align: left;padding-left:10pt; ">_________________________________________________________________________</p></td>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td></td>
+                                <td>20%</td>
+                                <td>$list.allSumWithoutNds$ гр.</td>
+                                <td>$list.allNds$ гр.</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
